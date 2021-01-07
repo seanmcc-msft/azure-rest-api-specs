@@ -1582,6 +1582,18 @@
             "$ref": "#/parameters/LeaseIdOptional"
           },
           {
+            "$ref": "#/parameters/IfMatch"
+          },
+          {
+            "$ref": "#/parameters/IfModifiedSince"
+          },
+          {
+            "$ref": "#/parameters/IfNoneMatch"
+          },
+          {
+            "$ref": "#/parameters/IfUnmodifiedSince"
+          },
+          {
             "$ref": "#/parameters/PathRenameDestination"
           },
           {
