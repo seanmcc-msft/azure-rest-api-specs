@@ -2885,7 +2885,7 @@
       "x-ms-client-name": "OverwriteDestination",
       "in": "header",
       "required": false,
-      "type": "string",
+      "type": "boolean",
       "x-ms-parameter-location": "method",
       "description": "If the destination should be overwritten"
     }
