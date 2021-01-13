@@ -1610,9 +1610,6 @@
           },
           {
             "$ref": "#/parameters/DestinationLeaseId"
-          },
-          {
-            "$ref": "#/parameters/PathRenameOverwriteDestination"
           }
         ],
         "responses": {
@@ -2879,15 +2876,6 @@
       "type": "string",
       "x-ms-parameter-location": "method",
       "description": "The destination path"
-    },
-    "PathRenameOverwriteDestination": {
-      "name": "x-ms-overwrite-destination",
-      "x-ms-client-name": "OverwriteDestination",
-      "in": "header",
-      "required": false,
-      "type": "boolean",
-      "x-ms-parameter-location": "method",
-      "description": "If the destination should be overwritten"
     }
   },
   "definitions": {
