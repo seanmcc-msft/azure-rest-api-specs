@@ -2164,6 +2164,9 @@
           },
           {
             "$ref": "#/parameters/PathSetAclMode"
+          },
+          {
+            "$ref": "#/parameters/Acl"
           }
         ],
         "responses": {
@@ -2789,8 +2792,11 @@
       "required": true,
       "type": "string",
       "enum": [
-        "SetOwner",
-        "SetPermissions"
+        "Set-Acl",
+        "Remove-Acl-Entries",
+        "Modify-Acl",
+        "Remove-Acl",
+        "Set-Owner-Permission"
       ],
       "x-ms-enum": {
         "name": "PathSetAclMode",
