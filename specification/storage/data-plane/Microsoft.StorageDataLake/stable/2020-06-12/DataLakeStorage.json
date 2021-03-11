@@ -2200,8 +2200,8 @@
             "required": false,
             "type": "string",
             "enum": [
-              "File",
-              "Directory"
+              "file",
+              "directory"
             ],
             "x-ms-enum": {
               "name": "PathType",
@@ -2260,11 +2260,12 @@
           "name": "x-ms-blob-type",
           "x-ms-client-name": "blobType",
           "in": "header",
-          "required": true,
+          "required": false,
           "x-ms-parameter-location": "method",
           "description": "Specifies the type of blob to create: block blob, page blob, or append blob.",
           "type": "string",
           "enum": [
+            "None",
             "BlockBlob"
           ],
           "x-ms-enum": {
