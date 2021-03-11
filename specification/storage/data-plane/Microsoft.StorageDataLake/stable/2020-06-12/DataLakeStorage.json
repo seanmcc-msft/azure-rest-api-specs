@@ -1700,13 +1700,7 @@
             "$ref": "#/parameters/ForceFlag"
           },
           {
-            "name": "maxRecords",
-            "in": "query",
-            "description": "Optional. It specifies the maximum number of files or directories on which the acl change will be applied. If omitted or greater than 2,000, the request will process up to 2,000 items",
-            "format": "int32",
-            "minimum": 1,
-            "required": false,
-            "type": "integer"
+            "$ref": "#/parameters/MaxRecords"
           },
           {
             "$ref": "#/parameters/Acl"
@@ -2179,6 +2173,9 @@
           },
           {
             "$ref": "#/parameters/Marker"
+          },
+          {
+            "$ref": "#/parameters/MaxRecords"
           }
         ],
         "responses": {
@@ -2828,6 +2825,16 @@
       "description": "Optional. If the number of sub nodes to be processed exceeds the limit which the server can process, a marker should be returned in the response body <NextMarker> field. When a marker is returned in the response, it must be specified in a subsequent invocation of the recursive operation to continue modifying acls on the path. Valid for SetAccessControl recursive apis.",
       "required": false,
       "type": "string"
+    },
+    "MaxRecords": {
+      "name": "maxRecords",
+      "x-ms-parameter-location": "method",
+      "in": "query",
+      "description": "Optional. It specifies the maximum number of files or directories on which the acl change will be applied. If omitted or greater than 2,000, the request will process up to 2,000 items",
+      "format": "int32",
+      "minimum": 1,
+      "required": false,
+      "type": "integer"
     }
   },
   "definitions": {
@@ -2951,6 +2958,9 @@
           "type": "string"
         },
         "FailedEntries": {
+          "xml": {
+            "wrapped": true
+          },
           "type": "array",
           "items": {
             "$ref": "#/definitions/SetAclFailedEntry"
@@ -2960,6 +2970,9 @@
     },
     "SetAclFailedEntry": {
       "type": "object",
+      "xml": {
+        "name": "FailedEntry"
+      },
       "properties": {
         "Name": {
           "type": "string"
