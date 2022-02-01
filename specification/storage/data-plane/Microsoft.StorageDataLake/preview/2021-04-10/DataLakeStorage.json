@@ -700,6 +700,9 @@
           },
           {
             "$ref": "#/parameters/SourceIfUnmodifiedSince"
+          },
+          {
+            "$ref": "#/parameters/EncryptionContext"
           }
         ],
         "responses": {
@@ -2987,6 +2990,15 @@
       "x-ms-parameter-location": "method",
       "in": "query",
       "required": false
+    },
+    "EncryptionContext": {
+      "name": "x-ms-encryption-context",
+      "x-ms-client-name": "encryptionContext",
+      "in": "header",
+      "required": false,
+      "type": "string",
+      "x-ms-parameter-location": "method",
+      "description": "Specifies the encryption context to set on the file."
     }
   },
   "definitions": {
